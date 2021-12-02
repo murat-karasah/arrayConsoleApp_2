@@ -27,7 +27,8 @@ namespace arrayConsoleApp_2
                 Console.WriteLine(b[i]);
             }
             */
-
+            // Array console creat
+            /*
             Console.WriteLine("int veri türünde bir dizi oluşturuluyor... Dizi kaç elemanlı olsun?");
             int enterArray = Convert.ToInt32(Console.ReadLine());
             int[] dizim = new int[enterArray];
@@ -47,6 +48,24 @@ namespace arrayConsoleApp_2
             {
                 Console.WriteLine(item);
             }
+            */
+
+            Random rnd = new Random();
+            int[] dizim = new int[20];
+            int sayac = 0;
+            for (int i = 0; i < dizim.Length; i++)
+            {
+                dizim[i] = rnd.Next(1, 10);
+            }
+            foreach (int item in dizim)
+            {
+                Console.WriteLine(item);
+                if (item==4)
+                {
+                    sayac++;
+                }
+            }
+            Console.WriteLine($"toplam {sayac} adet 4 elemanı vardır.");
         }
     }
 }
